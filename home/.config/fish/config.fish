@@ -63,9 +63,9 @@ fundle init
 set -U fish_user_paths $fish_user_paths $HOME/bin
 
 # set EDITOR environment variable
-# alias vim="nvim"
+alias vim="nvim"
 # alias emacs="emacsclient --tty --create-frame"
-set -Ux EDITOR vim
+set -U EDITOR nvim
 
 # git convenience aliases
 alias wip="git commit -a -m wip"
