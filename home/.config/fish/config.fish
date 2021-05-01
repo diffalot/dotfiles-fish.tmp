@@ -10,7 +10,7 @@ end
 # Fundle, a bundler for fish
 
 # colorschemes
-#fundle plugin 'smh/base16-shell-fish'
+fundle plugin 'smh/base16-shell-fish'
 
 # Prompts
 #fundle plugin 'matchai/spacefish'
