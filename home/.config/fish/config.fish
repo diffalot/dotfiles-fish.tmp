@@ -2,17 +2,61 @@
 switch (uname -m)
 case armv7l # raspberry pi
 end
-
 # configuration based on distribution
 switch (uname)
 case Linux
 end
 
+# Fundle, a bundler for fish
+
+# colorschemes
+#fundle plugin 'smh/base16-shell-fish'
+
+# Prompts
+fundle plugin 'pure-fish/pure'
+#fundle plugin 'oh-my-fish/theme-edan'
+#fundle plugin 'jorgebucaran/hydro'
+#fundle plugin 'oh-my-fish/theme-scorphish'
+#fundle plugin 'hauleth/agnoster'
+
+# utilities other scripts depend on
+fundle plugin 'tuvistavie/fish-completion-helpers'
+fundle plugin 'oh-my-fish/plugin-config'
+fundle plugin 'tuvistavie/oh-my-fish-core'
+fundle plugin 'jorgebucaran/replay.fish'
+fundle plugin 'oh-my-fish/plugin-foreign-env'
+fundle plugin 'edc/bass'
+
+# ssh agent (keychain can do ssh and gpg)
+fundle plugin 'danhper/fish-ssh-agent'
+#fundle plugin 'jitakirin/pkg-keychain'
+#set -U keychain_init_args --quiet --agents ssh id_rsa
+
+# efficiency tools
+fundle plugin 'patrickf3139/Colored-Man-Pages'
+fundle plugin 'tuvistavie/fish-fastdir'
+fundle plugin 'laughedelic/pisces'
+#fundle plugin 'jorgebucaran/autopair.fish'
+
+# environment managers
+#fundle plugin 'FabioAntunes/fish-nvm'
+#fundle plugin 'oh-my-fish/plugin-pyenv'
+#fundle plugin 'oh-my-fish/plugin-rustup'
+#fundle plugin 'oh-my-fish/plugin-rbenv'
+
+# OS specific aliases, etc.
+#fundle plugin 'oh-my-fish/plugin-osx'
+#fundle plugin 'oh-my-fish/plugin-archlinux'
+
+# Utilities that aren't for everyone
+#fundle plugin 'vincentjames501/fish-kill-on-port'
+#fundle plugin 'oh-my-fish/plugin-aws'
+#fundle plugin 'tuvistavie/fish-watson'
+
+fundle init
+
 # use nerd font themeing
 set -g theme_nerd_fonts yes
-
-# setup ssh-agent
-set -U keychain_init_args --quiet --agents ssh id_rsa
 
 # homeshick dotfile management
 source "$HOME/.homesick/repos/homeshick/homeshick.fish"
